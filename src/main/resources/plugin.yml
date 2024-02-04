@@ -1,0 +1,23 @@
+name: SDI
+version: '${version}'
+main: me.arcator.sdi.SDI
+api-version: '1.20'
+commands:
+  ecount:
+    description: Counts all entities in current chunk.
+    usage: /<command>
+    permission: ecounter.basic
+    permission-message: You don't have <permission>
+  sdi:
+    description: Delete all entities beyond +- 4000
+    usage: /<command> [purge]
+    permission: sdi.basic
+    permission-message: You don't have <permission>
+permissions:
+  ecounter.basic:
+    description: Counts entities
+  sdi.basic:
+    description: Allows you to purge entities
+    default: op
+libraries:
+  - org.jetbrains.kotlin:kotlin-stdlib:2.0.0-Beta3
